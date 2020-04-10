@@ -18,7 +18,7 @@ def run_demo():
 
     if args.action == 'classification':
         classifier = ClassificationNet()
-        classifier.load_state_dict(torch.load('classifier.pth'))
+        classifier.load_state_dict(torch.load('classifier.pth', map_location=torch.device('cpu')))
         classifier.eval()
 
         print(process_classification(classifier, path_to_mel))
@@ -26,7 +26,7 @@ def run_demo():
 
     elif args.action == 'denoising':
         denoiser = DenoiseNet()
-        denoiser.load_state_dict(torch.load('denoiser.pth'))
+        denoiser.load_state_dict(torch.load('denoiser.pth', map_location=torch.device('cpu')))
         denoiser.eval()
 
         cleaned_mel = process_denoising(denoiser, path_to_mel)
