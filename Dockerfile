@@ -11,7 +11,8 @@ COPY main.py /main.py
 COPY subarray.py /subarray.py
 COPY classifier.pth /classifier.pth
 COPY denoiser.pth /denoiser.pth
-
+COPY clean.npy /clean.npy
+COPY noisy.npy /noisy.npy
 
 ADD requirements.txt /req/
 RUN pip install -r /req/requirements.txt
