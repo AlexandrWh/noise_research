@@ -1,0 +1,10 @@
+librosa
+soundfile
+matplotlib
+numpy
+opencv-python
+torch
+sklearn
+zipfile36
+requests
+tqdm
